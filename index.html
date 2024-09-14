@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Red</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <header>
+        <!-- <section class="Encabezado" id="Encabeza">
+            <a href="index.html"><img src="./assets/logotipo4.png" alt="ISOTIPO"  />
+        </section>
+    </header> -->
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <h2>Por favor, ingrese su edad</h2>
+            <form id="ageForm">
+                <input type="number" id="ageInput" min="0" max="120" required>
+                <button type="submit">Verificar Edad</button>
+            </form>
+        </div>
+    </div>
+    <div id="welcome-message">
+        <h2>¡Bienvenido!</h2>
+    </div>
+    <div id="content">
+        <h2>Bienvenido a INFOCAM NETWORK&HARDWARE</h2>
+    </div>
+    <div class="container2">
+        <h3>Calcula los requerimientos de tu red:</h3>
+        
+        <div class="input-group">
+            <label for="pcs">Número de PCs:</label>
+            <input type="number" id="pcs" name="pcs" min="0" value="0">
+        </div>
+        <div class="input-group">
+            <label for="servers">Número de Servidores:</label>
+            <input type="number" id="servers" name="servers" min="0" value="0">
+        </div>
+        <div class="input-group">
+            <label for="phones">Número de Teléfonos:</label>
+            <input type="number" id="phones" name="phones" min="0" value="0">
+        </div>
+        <div class="input-group">
+            <label for="wifi">Número de Dispositivos WiFi:</label>
+            <input type="number" id="wifi" name="wifi" min="0" value="0">
+        </div>
+    
+        <button onclick="calcularRed()">Calcular Red</button>
+    </div>
+    
+    <div id="modalCart" class="modalCart">
+        <div class="modalCart-content">
+            <div class="modalCart-header">Recomendación de Red</div>
+            
+            <table class="carrito">
+                <thead>
+                    <tr>
+                        <th>Artículo</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body"></tbody>
+            </table>
+    
+            <p id="leyenda"></p>
+    
+            <div class="modalCart-footer">
+                <button onclick="cerrarModal()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="error-message">
+        <h1>Acceso Denegado</h1>
+        <p>Lo siento, aún no podemos hacer negocios contigo, vuelve cuando seas mayor.</p>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
